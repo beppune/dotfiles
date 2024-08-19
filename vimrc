@@ -7,3 +7,28 @@ set relativenumber
 
 inoremap jj <Esc>
 
+nnoremap <C-E> :Explore! .<CR>
+
+packadd lsp
+
+" Rust language server
+call LspAddServer([#{
+	\    name: 'rustlang',
+	\    filetype: ['rust'],
+	\    path: '/usr/bin/rust-analyzer',
+	\    args: [],
+	\    syncInit: v:true
+	\  }])
+
+let g:apl_prefix_key='°'
+
+function RustEvent()
+	if &filetype == "rust"
+		colorscheme blue
+	else
+		colorscheme default
+	endif
+endfunction
+
+autocmd BufWinEnter * call RustEvent()
+
