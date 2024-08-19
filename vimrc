@@ -32,7 +32,7 @@ call LspAddServer([#{
 """" set color scheme for "ide mode"
 function RustEvent()
 	if &filetype == "rust"
-		colorscheme blue
+		colorscheme fu
 	else
 		colorscheme default
 	endif
