@@ -34,7 +34,7 @@ function RustEvent()
 	if &filetype == "rust"
 		colorscheme fu
 	else
-		colorscheme default
+		colorscheme ron
 	endif
 endfunction
 
