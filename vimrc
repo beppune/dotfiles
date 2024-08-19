@@ -20,8 +20,6 @@ call LspAddServer([#{
 	\    syncInit: v:true
 	\  }])
 
-let g:apl_prefix_key='°'
-
 function RustEvent()
 	if &filetype == "rust"
 		colorscheme blue
@@ -30,5 +28,7 @@ function RustEvent()
 	endif
 endfunction
 
-autocmd BufWinEnter * call RustEvent()
+augroup Rust
+	autocmd BufWinEnter * call RustEvent()
+augroup END
 
