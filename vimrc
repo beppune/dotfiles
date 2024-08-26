@@ -6,6 +6,7 @@ set shiftwidth=4
 set number
 set relativenumber
 set nocompatible
+set laststatus=2
 
 " Make find search more QoL
 set wildmenu
