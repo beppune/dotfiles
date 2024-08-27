@@ -13,8 +13,8 @@ set wildmenu
 
 inoremap jk <Esc>
 inoremap <F3> <Space>{<CR><CR>}<Up><Tab>
-nnoremap <C-Up> <C-E>
-nnoremap <C-Down> <C-Y>
+nnoremap <C-Down> <C-E>
+nnoremap <C-Up> <C-Y>
 
 let g:lsp = v:true
 let g:lsc = v:false
