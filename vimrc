@@ -17,5 +17,8 @@ nnoremap <C-Up> <C-E>
 nnoremap <C-Down> <C-Y>
 
 let g:lsp = v:true
+let g:lsc = v:false
+
 source $HOME/.vim/lsp.vim
+source $HOME/.vim/lsc.vim
 
