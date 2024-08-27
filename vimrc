@@ -7,6 +7,7 @@ set relativenumber
 colorscheme fu
 set laststatus=2
 set path+=**
+set wildmenu
 
 " REMAPS
 

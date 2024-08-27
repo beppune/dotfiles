@@ -9,8 +9,6 @@ if finddir("lsp", getenv('HOME') .  '/.vim/pack/**') ==? ""
 	finish
 endif
 
-echo "Loading LSP"
-
 "" LANGUAGE SERVERS
 packadd lsp
 
