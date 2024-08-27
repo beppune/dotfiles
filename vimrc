@@ -4,7 +4,7 @@ set tabstop=4
 set shiftwidth=4
 set number
 set relativenumber
-colorscheme fu
+colorscheme calmar256-dark
 set laststatus=2
 set path+=**
 set wildmenu
@@ -13,6 +13,8 @@ set wildmenu
 
 inoremap jk <Esc>
 inoremap <F3> <Space>{<CR><CR>}<Up><Tab>
+nnoremap <C-Up> <C-E>
+nnoremap <C-Down> <C-Y>
 
 let g:lsp = v:true
 source $HOME/.vim/lsp.vim
