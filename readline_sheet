@@ -1,0 +1,44 @@
+
+function rlsheet () {
+	local PINK="\\e[38;2;255;0;255m"
+	
+	echo
+	echo -e "${PINK}.::| Some readline shortcuts |::.\\e[0m"
+	echo
+	local L1="${PINK} Ctrl-a - Move to the start of the line\\e[0m"
+	local L2="${PINK} Ctrl-e - Move to the end of the line\\e[0m"
+	local L3="${PINK} Ctrl-f - Move forward a character\\e[0m"
+	local L4="${PINK} Ctrl-b - Move backward a character\\e[0m"
+	local L5="${PINK} Alt-f  - Move forward to the end of the next word\\e[0m"
+	local L6="${PINK} Alt-b  - Move backward to the start of the current or previous word\\e[0m"
+	
+	local L7="${PINK} Ctrl-k - Cut forward to the end of the line\\e[0m"
+	local L8="${PINK} Ctrl-k - Cut backward to the end of the line\\e[0m"
+	local L9="${PINK} Alt-d  - Cut forward to the end of the current word\\e[0m"
+	local L0="${PINK} Ctrl-w - Cut backward to the end of the current word\\e[0m"
+
+	local LA="${PINK} Ctrl-n - Look history forward\\e[0m"
+	local LB="${PINK} Ctrl-p - Look history backward\\e[0m"
+	local LC="${PINK} Ctrl-r - Search history\\e[0m"
+	
+	echo -e "$L1"
+	echo -e "$L2"
+	echo -e "$L3"
+	echo -e "$L4"
+	echo -e "$L5"
+	echo -e "$L6"
+	echo
+	echo -e "$L7"
+	echo -e "$L8"
+	echo -e "$L9"
+	echo -e "$L0"
+	echo
+
+	echo -e "$LA"
+	echo -e "$LB"
+	echo -e "$LC"
+	echo
+}
+
+
+
