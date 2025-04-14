@@ -20,6 +20,7 @@ function rlsheet () {
 	local LA="${PINK} Ctrl-n - Look history forward\\e[0m"
 	local LB="${PINK} Ctrl-p - Look history backward\\e[0m"
 	local LC="${PINK} Ctrl-r - Search history\\e[0m"
+	local LD="${PINK} Ctrl-l - Clear screen\\e[0m"
 	
 	echo -e "$L1"
 	echo -e "$L2"
@@ -37,6 +38,7 @@ function rlsheet () {
 	echo -e "$LA"
 	echo -e "$LB"
 	echo -e "$LC"
+	echo -e "$LD"
 	echo
 }
 
