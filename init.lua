@@ -4,6 +4,7 @@ set tabstop=4
 set shiftwidth=4
 set number
 set relativenumber
+colorscheme darkblue
 
 inoremap jj <Esc>
 inoremap <C-o> <Esc>o}<Esc>O
