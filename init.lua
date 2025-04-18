@@ -4,7 +4,13 @@ set tabstop=4
 set shiftwidth=4
 set number
 set relativenumber
-colorscheme darkblue
+set mouse=""
+colorscheme blue
+
+let mapleader=" "
+nnoremap <Leader>v <C-w>v
+nnoremap <Leader>w <C-w>w
+nnoremap <Leader>r <C-w>r
 
 inoremap jj <Esc>
 inoremap <C-o> <Esc>o}<Esc>O
@@ -20,3 +26,6 @@ augroup Folds
 augroup END
 
 ]])
+
+require("lsp")
+
