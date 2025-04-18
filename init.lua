@@ -11,6 +11,7 @@ o.relativenumber = true
 o.mouse = ""
 
 c.colorscheme('blue')
+c.language('en')
 
 g.mapleader = " "
 a.nvim_set_keymap('n', '<Leader>v', '<C-w>v', {noremap = true})
