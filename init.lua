@@ -1,66 +1,44 @@
-vim.cmd([[
 
-set tabstop=4
-set shiftwidth=4
-set number
-set relativenumber
-set mouse=""
-colorscheme blue
+o = vim.o
+a = vim.api
+c = vim.cmd
+g = vim.g
 
-let mapleader=" "
-nnoremap <Leader>v <C-w>v
-nnoremap <Leader>w <C-w>w
-nnoremap <Leader>r <C-w>r
+o.tabstop = 4
+o.shiftwidth = 4
+o.number = true
+o.relativenumber = true
+o.mouse = ""
 
-inoremap jj <Esc>
-inoremap <C-o> <Esc>o}<Esc>O
-inoremap <C-s> <Esc>:w<Enter>i
+c.colorscheme('blue')
 
-nnoremap <C-q> <Esc>:q!<Enter>
-nnoremap <C-h> <Esc>:noh<Enter>
+g.mapleader = " "
+a.nvim_set_keymap('n', '<Leader>v', '<C-w>v', {noremap = true})
+a.nvim_set_keymap('n', '<Leader>w', '<C-w>w', {noremap = true})
+a.nvim_set_keymap('n', '<Leader>r', '<C-w>r', {noremap = true})
 
-augroup Folds
-	au!
-	autocmd FileType c,rust set foldmethod=indent
-	autocmd FileType c,rust set foldcolumn=1
-augroup END
+a.nvim_set_keymap('i', 'jj', '<Esc>', {noremap = true})
+a.nvim_set_keymap('i', '<C-o>', '<Esc>o}<Esc>O', {noremap = true})
+a.nvim_set_keymap('i', '<C-s>', '<Esc>:w<Enter>i', {noremap = true})
 
-]])
+a.nvim_set_keymap('n', '<C-h>', '<Esc>:noh<Enter>', {noremap = true})
 
--- require("lsp")
--- Bootstrap lazy.nvim
---
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
-end
-vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+-- AUTOCOMMAND GROUP FOR FOLDING
 
--- Setup lazy.nvim
-require("lazy").setup({
-  spec = {
-    -- import your plugins
-    { import = "plugins" },
-  },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+folds = a.nvim_create_augroup('Folds', {
+	clear = true
 })
+
+a.nvim_create_autocmd('FileType', {
+	group = folds,
+	pattern = 'c,rust',
+	callback = 'set foldmethod=indent'
+})
+
+a.nvim_create_autocmd('FileType', {
+	group = folds,
+	pattern = 'c,rust',
+	callback = 'set foldcolumn=1'
+})
+
