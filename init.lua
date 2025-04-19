@@ -33,7 +33,6 @@ end
 -- Insert Mode
 inoremap( 'jj', '<Esc>', "Use 'jj' in insert mode to switch to normal mode")
 inoremap( 'kk', '<Esc>:', "Use 'kk' in insert mode to switch to command mode")
-nnoremap( 'kk', '<Esc>:', "Use 'kk' in normal mode to switch to command mode")
 inoremap( '<C-s>', '<Esc>:w<Esc>i', "In insert mode save changes and get back in insert mode")
 
 -- Windows
