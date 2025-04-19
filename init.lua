@@ -6,8 +6,8 @@ a = vim.api
 g = vim.g
 
 -- Settings
-c.colorscheme('retrobox')
-c.language('en')
+c.colorscheme('wildcharm')
+c.language('en_US.utf8')
 o.number = true
 o.relativenumber = true
 o.tabstop = 4
@@ -22,33 +22,43 @@ local function map_key(mode, lhs, rhs, descj)
 	})
 end
 
+local function inoremap(lhs, rhs, desc)
+	map_key('i', lhs, rhs, desc)
+end
+
+local function nnoremap(lhs, rhs, desc)
+	map_key('n', lhs, rhs, desc)
+end
+
 -- Insert Mode
-map_key('i', 'jj', '<Esc>', "Use 'jj' in insert mode to switch in normal mode")
-map_key('i', '<C-s>', '<Esc>:w<Esc>i', "In insert mode save changes and get back in insert mode")
+inoremap( 'jj', '<Esc>', "Use 'jj' in insert mode to switch to normal mode")
+inoremap( 'kk', '<Esc>:', "Use 'kk' in insert mode to switch to command mode")
+nnoremap( 'kk', '<Esc>:', "Use 'kk' in normal mode to switch to command mode")
+inoremap( '<C-s>', '<Esc>:w<Esc>i', "In insert mode save changes and get back in insert mode")
 
 -- Windows
 g.mapleader = " "
-map_key('n', '<Leader>v', '<C-w>v', "Split Window Vertically")
-map_key('n', '<Leader>r', '<C-w>r', "Rotate Windows")
-map_key('n', '<Leader>w', '<C-w>w', "Switch to next window")
+nnoremap( '<Leader>v', '<C-w>v', "Split Window Vertically")
+nnoremap( '<Leader>r', '<C-w>r', "Rotate Windows")
+nnoremap( '<Leader>w', '<C-w>w', "Switch to next window")
 
 -- Scroll in Normal Mode
 -- g.mapleader = " "
-map_key('n', '<Leader>j', '<C-d>', "Scroll down half window")
-map_key('n', '<Leader>k', '<C-u>', "Scroll up hal window")
-map_key('n', '<Leader>h', '<C-e>', "Scroll down one line")
-map_key('n', '<Leader>l', '<C-y>', "Scroll up one line")
+nnoremap( '<Leader>j', '<C-d>', "Scroll down half window")
+nnoremap( '<Leader>k', '<C-u>', "Scroll up half window")
+nnoremap( '<Leader>h', '3<C-e>', "Scroll three lines")
+nnoremap( '<Leader>l', '3<C-y>', "Scroll up three lines")
 
 -- Tabs
 -- g.mapleader = " "
-map_key('n', '<Leader>t', ':tabnew<Enter>', "New Tab")
-map_key('n', '<Leader>c', ':tabclose<Enter>', "Close Tab")
-map_key('n', '<Leader>n', ':tabnext<Enter>', "Next Tab")
+nnoremap( '<Leader>t', ':tabnew<Enter>', "New Tab")
+nnoremap( '<Leader>c', ':tabclose<Enter>', "Close Tab")
+nnoremap( '<Leader>n', ':tabnext<Enter>', "Next Tab")
+
+-- Edit
+nnoremap( 'c"', 'T"ct"', "Change text inside \"\"")
+nnoremap( 'c\'', 'T\'ct\'', "Change text inside ''")
 
 -- Utils
-map_key('n', '<C-h>', ':nohlsearch<Enter>', "Clear search highlights")
-
-
-vim.api.utils = require('utils')
-
+nnoremap( '<C-h>', ':nohlsearch<Enter>', "Clear search highlights")
 
