@@ -1,4 +1,4 @@
-*myrefs*		My Quick References
+*myrefs.txt*	My Quick References
 
 Insert Mode Mappings				*insert-mappings* ~
 
@@ -8,14 +8,21 @@ Insert Mode Mappings				*insert-mappings* ~
 
 Windows and Tabs Mapping in Normal Mode	~
 							
+	Leader is space ' ' character. Configure leader in init.lua
+		in mappings section and restart nvim to effectively
+		change leader for the following mappings
+
 									*windows-mappings*
+	<Leader>v		[<C-W>v] Split Window Vertically
+
 	<Leader>l		[<C-Y>] Scroll up one line
 	<Leader>h		[<C-E>] Scroll down one line
+
 	<Leader>k		[<C-U>] Scroll up half window
 	<Leader>j		[<C-D>] Scroll down half window
+
 	<Leader>w		[<C-W>w] Switch to next window
 	<Leader>r		[<C-W>r] Rotate Windows
-	<Leader>v		[<C-W>v] Split Window Vertically
 
 									*tabs-mappings*
 	<Leader>n		[:tabnext<Enter>] Next Tab
@@ -27,4 +34,4 @@ Various ~
 
 	<CTRL-h>		:nohlsearch :noh
 
-	vim:tw=78:ft=help:nonumber:norelativenumber
+ vim:tw=78:ts=8:noet:ft=help:norl:
