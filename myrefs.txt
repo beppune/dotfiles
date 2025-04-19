@@ -1,0 +1,30 @@
+*myrefs*		My Quick References
+
+Insert Mode Mappings				*insert-mappings* ~
+
+	<jj>		Esc Insert Mode
+	<CTRL-s>	Save changes and get back in Insert Mode
+
+
+Windows and Tabs Mapping in Normal Mode	~
+							
+									*windows-mappings*
+	<Leader>l		[<C-Y>] Scroll up one line
+	<Leader>h		[<C-E>] Scroll down one line
+	<Leader>k		[<C-U>] Scroll up half window
+	<Leader>j		[<C-D>] Scroll down half window
+	<Leader>w		[<C-W>w] Switch to next window
+	<Leader>r		[<C-W>r] Rotate Windows
+	<Leader>v		[<C-W>v] Split Window Vertically
+
+									*tabs-mappings*
+	<Leader>n		[:tabnext<Enter>] Next Tab
+	<Leader>c		[:tabclose<Enter>] Close Tab
+	<Leader>t		[:tabnew<Enter>] New Tab
+
+
+Various ~
+
+	<CTRL-h>		:nohlsearch :noh
+
+	vim:tw=78:ft=help:nonumber:norelativenumber
