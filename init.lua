@@ -6,7 +6,7 @@ a = vim.api
 g = vim.g
 
 -- Settings
-c.colorscheme('wildcharm')
+c.colorscheme('sorbet')
 c.language('en_US.utf8')
 o.number = true
 o.relativenumber = true
@@ -53,10 +53,6 @@ nnoremap( '<Leader>l', '3<C-y>', "Scroll up three lines")
 nnoremap( '<Leader>t', ':tabnew<Enter>', "New Tab")
 nnoremap( '<Leader>c', ':tabclose<Enter>', "Close Tab")
 nnoremap( '<Leader>n', ':tabnext<Enter>', "Next Tab")
-
--- Edit
-nnoremap( 'c"', 'T"ct"', "Change text inside \"\"")
-nnoremap( 'c\'', 'T\'ct\'', "Change text inside ''")
 
 -- Utils
 nnoremap( '<C-h>', ':nohlsearch<Enter>', "Clear search highlights")
