@@ -1,0 +1,150 @@
+{
+    "description" : {
+        "name" : "Iitalian",
+        "locale" : "it_IT",
+        "comment" : "For a more complete example of possible values, see fr_FR file"
+    },
+    "language" : {
+        "digits" : {
+            "uno" : "1",
+            "due" : "2",
+            "tre" : "3",
+            "quattro" : "4",
+            "cinque" : "5",
+            "sei" : "6",
+            "sette" : "7",
+            "otto" : "8",
+            "nove" : "9",
+            "zero" : "0"
+         }
+    },
+    "custom" : [{
+    "commands" : [{
+        "value" : "digits",
+        "utterances" : ["usa le cifre"],
+        "description" : "Toggle use of digits"
+        }, {
+        "value" : "spelling",
+        "utterances" : ["spelling"],
+        "description" : "Start spelling mode"
+        }, {
+        "value" : "dictation",
+        "utterances" : ["dettato"],
+        "description" : "Start dictation mode"
+        }, {
+        "value" : "literal",
+        "utterances" : ["dettato libero"],
+        "description" : "Start dictation without formatting"
+        }, {
+        "value" : "cancel",
+        "utterances" : ["annulla"],
+        "description" : "Cancel last utterance"
+        }],
+    "case" : [{
+        "value" : "upper all",
+        "utterances" :["maiuscolo"],
+        "description" : "Use only capital letters"
+        }, {
+        "value" : "upper",
+        "utterances" : ["maiuscola"],
+        "description" : "Capitalize the next word"
+        }, {
+        "value" : "title",
+        "utterances" : ["capitalize first letters"],
+        "description" : "Capitalize the first letters of each word"
+        }, {
+        "value" : "capitalize",
+        "utterances" : "capitalize",
+        "description" : "Capital letter"
+        }, {
+        "value" : "lower",
+        "utterances" : "minuscole",
+        "description" : "Lowercase"
+        }],
+    "diacritics" :[],
+    "punctuation" : [{
+        "value" : "@",
+        "utterances" : ["chiocciola"]
+        }, {
+        "value" : "\t",
+        "utterances" : "tabulazione",
+        "description" : "Tabulation"
+        }, {
+        "value" : ",",
+        "utterances" : "virgola"
+        }, {
+        "value" : "…",
+        "utterances" : "puntini"
+        }, {
+        "value" : ".",
+        "utterances" : ["punto"]
+        }, {
+        "value" : ";",
+        "utterances" : ["punto e virgola"]
+        }, {
+        "value" : ":",
+        "utterances" : "due punti"
+        }, {
+        "value" : "!",
+        "utterances" : ["punto esclamativo"]
+        }, {
+        "value" : "?",
+        "utterances" : ["punto interrogativo"]
+        }, {
+        "value" : " ",
+        "utterances" : "spazio",
+        "description" : "Space"
+        }, {
+        "value" : "\n",
+        "utterances" : "a capo",
+        "description" : "New line"
+        }, {
+        "value" : "[",
+        "utterances" : ["aperta quadra"]
+        }, {
+        "value" : "(",
+        "utterances" : ["aperta tonda"]
+        }, {
+        "value" : "{",
+        "utterances" : ["aperta graffa"]
+        }, {
+        "value" : "\"",
+        "utterances" : ["virgolette"]
+        }, {
+        "value" : "]",
+        "utterances" : ["chiusa quadra"]
+        }, {
+        "value" : ")",
+        "utterances" : ["chiusa tonda"]
+        }, {
+        "value" : "}",
+        "utterances" : ["chiusa graffa"]
+        }, {
+        "value" : "'",
+        "utterances" : "apostrofo"
+        }, {
+        "value" : "+",
+        "utterances" : "segno più"
+        }, {
+        "value" : "-",
+        "utterances" : "segno meno"
+        }, {
+        "value" : "=",
+        "utterances" : "segno uguale"
+        }, {
+        "value" : "–",
+        "utterances" : ["trattino"]
+        }, {
+        "value" : "_",
+        "utterances" : ["trattino basso"]
+        }, {
+        "value" : "#",
+        "utterances" : ["cancelletto"]
+        }, {
+        "value" : "\/",
+        "utterances" : "slash"
+        }, {
+        "value" : "\\",
+        "utterances" : "backslash"
+    }]
+}
