@@ -6,6 +6,7 @@ a = vim.api
 g = vim.g
 
 -- Settings
+o.background = "light"
 c.colorscheme('iceberg')
 c.language('en')
 o.number = true
