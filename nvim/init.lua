@@ -33,6 +33,7 @@ map_key('n', '<Leader>v', '<C-w>v', "Split Window Vertically")
 map_key('n', '<Leader>r', '<C-w>r', "Rotate Windows")
 map_key('n', '<Leader>w', '<C-w>w', "Switch to next window")
 map_key('n', '<Leader>o', '<C-w>o', "Make this windows the only one visible")
+map_key('n', '<Leader>c', '<C-w>c', "Close current window")
 map_key('n', '<Leader>b', '<Esc>:30Lexplore!<Enter>', "Open netrw on the right")
 
 -- Scroll in Normal Mode
