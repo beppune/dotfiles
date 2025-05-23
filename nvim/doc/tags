@@ -1,0 +1,4 @@
+insert-mappings	myrefs.txt	/*insert-mappings*
+myrefs.txt	myrefs.txt	/*myrefs.txt*
+tabs-mappings	myrefs.txt	/*tabs-mappings*
+windows-mappings	myrefs.txt	/*windows-mappings*
