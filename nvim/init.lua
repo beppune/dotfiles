@@ -13,6 +13,7 @@ o.digraph = true
 
 require('mappings')
 
+-- Get this plugin -> https://github.com/neovim/nvim-lspconfig
 vim.lsp.enable('rust_analyzer')
 
 vim.diagnostic.config({
