@@ -9,27 +9,48 @@ g = vim.g
 o.number = true
 o.tabstop = 4
 o.shiftwidth = 0
-o.digraph = true
 
-require('mappings')
+vim.loader.enable()
 
--- Get this plugin -> https://github.com/neovim/nvim-lspconfig
+
 vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('lua_ls')
 
 vim.diagnostic.config({
-  -- 1. Inline messages (“virtual text”) ---------------------------------------
-  virtual_text = {
-    -- show only errors (remove this line to see WARN/INFO/HINT too)
-    severity = { min = vim.diagnostic.severity.ERROR },
-    -- how the message looks
-    prefix   = "●",      -- or "", "▎", etc.
-    spacing  = 4,        -- distance from code
-    source   = "if_many" -- show the linter name when ≥2 sources
-  },
-
-  -- 2. Supplementary UI channels (all optional) -------------------------------
-  signs          = true,          -- gutter icons
-  underline      = true,          -- underline offending text
-  update_in_insert = false,       -- speed vs. accuracy trade-off
-  severity_sort  = true           -- highest severity on top
+	virtual_text = false,
+	signs          = true,          -- gutter icons
+	underline      = true,          -- underline offending text
+	update_in_insert = true,       -- speed vs. accuracy trade-off
+	severity_sort  = true           -- highest severity on top
 })
+
+a.nvim_create_autocmd(
+	'LspAttach',
+	{
+		callback = function(ev)
+			vim.keymap.set( 'n', 'grd', vim.diagnostic.open_float)
+
+			vim.keymap.set( 'n', 'ss', function()
+				vim.diagnostic.jump({count=1})
+			end)
+
+			vim.keymap.set( 'n', 'sd', function()
+				vim.diagnostic.jump({count=-1})
+			end)
+
+			vim.o.signcolumn = 'yes'
+		end
+	}
+)
+
+a.nvim_create_autocmd(
+	'LspDetach',
+	{
+		callback = function(ev)
+			vim.keymap.del( 'n', 'grd')
+			vim.o.signcolumn = 'auto'
+		end
+	}
+)
+
+require('mappings')
