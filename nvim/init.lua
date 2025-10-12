@@ -9,7 +9,7 @@ g = vim.g
 o.number = true
 o.tabstop = 4
 o.shiftwidth = 0
-o.digraph = true
+-- o.digraph = true
 
 o.background = 'dark'
 c.colorscheme 'carbonfox'
