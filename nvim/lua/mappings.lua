@@ -38,6 +38,9 @@ map_key('n', '<Leader>n', ':tabnext<Enter>', "Next Tab")
 map_key('n', 'ss', '<Plug>(MoveToNextId)')
 map_key('n', 'sd', '<Plug>(MoveToPrevId)')
 
+-- LSP
+map_key('n', 'grh', ':lua vim.lsp.buf.hover()<Enter>')
+
 -- Utils
 map_key('n', '<C-h>', ':nohlsearch<Enter>', "Clear search highlights")
 
