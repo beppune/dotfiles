@@ -15,7 +15,7 @@ map_key('i', '<C-s>', '<Esc>:w<Esc>i', "In insert mode save changes and get back
 -- Windows
 g.mapleader = " "
 map_key('n', '<Leader>v', '<C-w>v', "Split Window Vertically")
-map_key('n', '<Leader>r', '<C-w>r', "Rotate Windows")
+map_key('n', '<Leader>x', '<C-w>r', "Rotate Windows")
 map_key('n', '<Leader>w', '<C-w>w', "Switch to next window")
 map_key('n', '<Leader>o', '<C-w>o', "Make this windows the only one visible")
 map_key('n', '<Leader>x', '<C-w>c', "Close current window")
