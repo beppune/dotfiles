@@ -1,3 +1,4 @@
+export HTTP_PROXY="http://10.98.2.243:3128"
 export http_proxy="http://10.98.2.243:3128"
 export https_proxy="http://10.98.2.243:3128"
 export CMAKE_EXPORT_COMPILE_COMMANDS=ON
