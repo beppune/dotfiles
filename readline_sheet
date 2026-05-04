@@ -22,7 +22,7 @@ function rlsheet () {
 	local L6="${PINK} Alt-b  - Move backward to the start of the current or previous word\\e[0m"
 	
 	local L7="${PINK} Ctrl-k - Cut forward to the end of the line\\e[0m"
-	local L8="${PINK} Ctrl-k - Cut backward to the end of the line\\e[0m"
+	local L8="${PINK} Ctrl-u - Cut backward to the end of the line\\e[0m"
 	local L9="${PINK} Alt-d  - Cut forward to the end of the current word\\e[0m"
 	local L0="${PINK} Ctrl-w - Cut backward to the end of the current word\\e[0m"
 
